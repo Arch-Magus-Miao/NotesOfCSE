@@ -1,0 +1,48 @@
+1. Propositional logic
+	(1) Defination
+			a. Proposition
+				a statement or assertion that expresses a judgment or opinion.
+				Ex. p <-> q
+			b. Truth table
+			c. Tautology
+				always true
+			d. Contradiction
+				always false
+			e. Contingency
+				it depends
+	(2) Determine whether the proposition is tautology, contradiction, or contingency.
+	(3) Write down the logical negation if compound proposition.
+	
+2. Set theory
+	(1) Set donated by symbols: (N, Z, Q, R, empty)
+	(2) Set builder notation (generator in python)
+		Ex. {x: x^2 = 16}
+	(3) Define cardinality: length of set.
+	(4) Define intersection, union and difference of sets.
+	(5) 略
+	(6) Power set: all children of a set.
+	(7) If |A| = n, |Pow(A)| = ?
+	(8) Use Venn-Diagram
+	
+3. Predicate Logic/ First order logic
+	(1) Define necessary Universes of Discourse.
+	(2) Define predicates and write the English statement using symbolic notation.
+	(3) Write the negation of the symbolic notation, and simplify
+	(4) Rewrite the negation in English.
+	
+	Ex. Everybody needs somebody.
+		(a) Let P be the set of people.
+		(b) Define Need(x,y)=“xneedsy”. ∀x∈P ∃y∈P, Need(x,y).
+		(c) ∃x∈P ∀y∈P, ¬Need(x,y).
+		(d) There is someone who doesn’t need anybody.
+		
+4. Asmptotic notation
+	(1) Define Big O (O()), Big Omega (Ω()), Big Theta (Θ()).
+	(2) Limit Theorem
+		lim(n->+∞) f(n)/g(n) > 0: f= Ω(g) 
+		lim(n->+∞) f(n)/g(n) < +∞: f= O(g)
+	(3) Use L'Hopital's Rule to evaluate limit, and mark out it.
+	
+5. Analysis of for and while loops
+	(1) Find close expression for the run time of a simple algorithm.
+		
