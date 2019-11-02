@@ -1,8 +1,9 @@
 1. Propositional logic
 	(1) Defination
 			a. Proposition
-				a statement or assertion that expresses a judgment or opinion.
+				a statement or assertion that expresses a judgment or opinion, which is either true or false.
 				Ex. p <-> q
+					There are no positive integers a, b, c satistying the equation a^n + b^n = c^n for any integer value of n greater than 2. (Fermat's Last Theorem)
 			b. Truth table
 			c. Tautology
 				always true
@@ -14,17 +15,29 @@
 	(3) Write down the logical negation if compound proposition.
 	
 2. Set theory
+		A set is a collection of distinct objects. The objects in the set are the elements of the set.
 	(1) Set donated by symbols: (N, Z, Q, R, empty)
 	(2) Set builder notation (generator in python)
 		Ex. {x: x^2 = 16}
 	(3) Define cardinality: length of set.
 	(4) Define intersection, union and difference of sets.
 	(5) 略
-	(6) Power set: all children of a set.
-	(7) If |A| = n, |Pow(A)| = ?
+	(6) Power set: the collection of all subset of a set.
+	(7) If |A| = n, |Pow(A)| = 2^n
 	(8) Use Venn-Diagram
+
+	***	
+	The Cartesian product of two sets A and B is the set containing all ordered pairs (a,b), where a∈A and b∈B. 
+	That is A×B={(a,b): a∈A ∧ b∈B}
 	
 3. Predicate Logic/ First order logic
+	(a) A predicate is a proposition whose truth values depends upon a  variable (i.e. P(x),Q(x,y), or R(a,b,c,d)).
+	Ex. P(n) = (n^2 >= 40), which is true for some values of n and false for others.
+	(b) The universe of discourse is the set that specifies the possible values of variables in a predicate.
+		Universal quantifier (∀)	for all
+		All values for the variable satisfy the predicate.
+		Existential quantifier (反着的E, 打不出来)	there exists
+		There is at least one value for the variablethat satisfies the predicate.
 	(1) Define necessary Universes of Discourse.
 	(2) Define predicates and write the English statement using symbolic notation.
 	(3) Write the negation of the symbolic notation, and simplify
@@ -38,10 +51,30 @@
 		
 4. Asmptotic notation
 	(1) Define Big O (O()), Big Omega (Ω()), Big Theta (Θ()).
+		(∃ is there exists)
+		O(g(n)) = {f(n): ∃c>0 ∃n0∈N, 0<=f(n)<=c*g(n), when n>=n0}
+		Ω(g(n)) = {f(n): ∃c>0 ∃n0∈N, c*g(n)<=f(n), when n>=n0},
+		Θ(g(n)) = both
 	(2) Limit Theorem
-		lim(n->+∞) f(n)/g(n) > 0: f= Ω(g) 
-		lim(n->+∞) f(n)/g(n) < +∞: f= O(g)
+		lim(n->+∞) f(n)/g(n) = +∞: f = Ω(g), f != O(g)
+		lim(n->+∞) f(n)/g(n) = 0 : f = O(g), f != Ω(g)
+		lim(n->+∞) f(n)/g(n) = c : f = Θ(g)
 	(3) Use L'Hopital's Rule to evaluate limit, and mark out it.
+	Transitivity
+	f(n)∈Θ(g(n)) and g(n)∈Θ(h(n)) imply f(n)∈Θ(h(n))
+	Reflexivity
+	f(n)∈Θ(f(n))
+	f(n)∈O(f(n))
+	f(n)∈Ω(f(n))
+	Symmetry
+	f(n)∈Θ(g(n)) <=> g(n)∈Θ(f(n))
+	Transpose symmetry
+	f(n)∈O(g(n)) <=> g(n)∈Ω(f(n))
+	
+	***
+	Hierarchy of Asymptotic Complexity
+	1.Θ(1) (constant functions) 2.Θ(log(n)) 3.Θ((log(n))^2) 4.  Θ(n^0.1) 5.Θ(√n) 6.Θ(n) 7.Θ(nlog(n)) 8.Θ(n^2) 9.Θ(n^3) 10.Θ(2^n) 11.Θ(3^n) 12.Θ(n!) 13.Θ(n^n)
+	
 	
 5. Analysis of for and while loops
 	(1) Find close expression for the run time of a simple algorithm.
